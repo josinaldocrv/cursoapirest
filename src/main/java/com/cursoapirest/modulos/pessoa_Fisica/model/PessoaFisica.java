@@ -1,30 +1,32 @@
-package com.cursoapirest.modulos.pessoa_Fisica.dto;
+package com.cursoapirest.modulos.pessoa_Fisica.model;
 
 import java.io.Serializable;
 import java.util.Objects;
 
-public class PessoaFisicaDTO implements Serializable {
+public class PessoaFisica implements Serializable {
 
     private static final long serialVersionUID = 1L;
 
     private long id;
     private  String name;
     private String email;
+    private String cpf;
 
-    public PessoaFisicaDTO(){
+    public PessoaFisica(){
     }
 
-    public PessoaFisicaDTO(long id, String name, String email) {
+    public PessoaFisica(long id, String name, String email, String cpf) {
         this.id = id;
         this.name = name;
         this.email = email;
+        this.cpf = cpf;
     }
 
     @Override
     public boolean equals(Object o) {
         if (this == o) return true;
-        if (!(o instanceof PessoaFisicaDTO)) return false;
-        PessoaFisicaDTO that = (PessoaFisicaDTO) o;
+        if (!(o instanceof PessoaFisica)) return false;
+        PessoaFisica that = (PessoaFisica) o;
         return id == that.id;
     }
 
@@ -59,5 +61,13 @@ public class PessoaFisicaDTO implements Serializable {
 
     public void setEmail(String email) {
         this.email = email;
+    }
+
+    public String getCpf() {
+        return cpf;
+    }
+
+    public void setCpf(String cpf) {
+        this.cpf = cpf;
     }
 }
