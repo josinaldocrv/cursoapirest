@@ -1,4 +1,4 @@
-package com.cursoapirest.modulos.status;
+package com.cursoapirest.modulos.status.dto;
 
 import java.io.Serializable;
 import java.util.Date;
